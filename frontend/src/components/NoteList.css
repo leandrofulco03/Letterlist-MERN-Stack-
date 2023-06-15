@@ -1,0 +1,110 @@
+.note_list {
+    background-color: #1c1d3d;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10rem;
+}
+
+.card {
+    --border-radius: 0.75rem;
+    --primary-color: #7257fa;
+    --secondary-color: #3c3852;
+    width: auto;
+    padding: 2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background-color: #262751;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .card > * + * {
+    margin-top: 1.1em;
+  }
+  
+  .card .card__content {
+    color: #fff;
+    font-size: 0.86rem;
+  }
+  
+  .card .card__title {
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #bc312e;
+  }
+
+  .card__author {
+    color: #8d8aa1;
+  }
+  
+  .card .card__date {
+    color: #8d8aa1;
+    font-size: 0.8rem;
+  }
+  
+  .card .card__arrow {
+    position: absolute;
+    background: var(--primary-color);
+    padding: 0.4rem;
+    border-bottom-right-radius: var(--border-radius);
+    bottom: 0;
+    right: 0;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrows path {
+    color: #fff;
+  }
+  
+  .card svg {
+    transition: 0.2s;
+  }
+  
+  /* hover */
+  .card:hover .card__arrow {
+    background: #bc312e;
+  }
+  
+  .card:hover .card__arrow svg {
+    transform: translateX(3px);
+  }
+
+  .card__edit {
+    position: absolute;
+    background: var(--primary-color);
+    padding: 0.4rem;
+    border-top-left-radius: var(--border-radius);
+    bottom: 0;
+    right: 29px;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hover */
+.card:hover .card__edit {
+    background: #bc312e;
+}
+  
+  .card:hover .card__edit svg {
+    transform: translateX(3px);
+}
+
+@media(max-width: 520px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card .card__content {
+    word-break: break-word;
+  }
+}

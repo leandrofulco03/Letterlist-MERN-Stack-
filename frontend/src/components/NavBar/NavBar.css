@@ -1,0 +1,17 @@
+.responsive-menu {
+    background-color: #1c1d3d;
+}
+
+header {
+    background-color: #1c1d3d;
+}
+
+nav {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.links a:hover {
+    border-bottom: 1px solid #bc312e;
+    padding-bottom: .3rem;
+    transition: 0.5s;
+}

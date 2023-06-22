@@ -1,9 +1,16 @@
 const express = require('express');
+require('dotenv').config();
 const app = express();
 const cors = require('cors');
+require('./database');
 
 // Settings
-app.set('port', process.env.PORT || 4000);
+const PORT = process.env.PORT || 4000;
+
+ app.listen(PORT, () => {
+    console.log(`Server on port ${PORT}`);
+ })
+
 
 // Middlewares
 app.use(cors());

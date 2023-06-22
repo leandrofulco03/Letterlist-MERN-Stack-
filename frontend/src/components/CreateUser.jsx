@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CreateUser.css';
+import ScrollReveal from 'scrollreveal';
 
 export default function CeateUser() {
     const [username, setUsername] = useState('');
@@ -20,6 +21,17 @@ export default function CeateUser() {
     }
 
     useEffect(() => {
+      const sr = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 2000,
+        reset: false
+      });
+      sr.reveal(
+        `
+        .user_form_right
+        `
+      )
         getUsers();
     }, []);
 

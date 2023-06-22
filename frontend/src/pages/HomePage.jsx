@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
-import { BoltIcon, CheckCircleIcon, UserIcon, PencilSquareIcon } from '@heroicons/react/24/outline'
+import { BoltIcon, CheckCircleIcon, UserIcon, PencilSquareIcon } from '@heroicons/react/24/outline';
+import ScrollReveal from 'scrollreveal';
+import { useEffect } from 'react';
 
 const features = [
   {
@@ -36,6 +38,20 @@ const stats = [
 ]
 
 export default function HomePage() {
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'top',
+      distance: '80px',
+      duration: 2000,
+      reset: false
+    });
+    sr.reveal(
+      `
+      .home_container
+      `
+    )
+  }, [])
 
   return (
     <main className="home_container">

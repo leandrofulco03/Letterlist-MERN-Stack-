@@ -1,6 +1,23 @@
+import { useEffect } from 'react';
 import './Footer.css';
+import ScrollReveal from 'scrollreveal';
 
 export default function Footer() {
+
+    useEffect(() => {
+        const sr = ScrollReveal({
+          origin: 'bottom',
+          distance: '80px',
+          duration: 2000,
+          reset: false
+        });
+        sr.reveal(
+          `
+          .footer
+          `
+        )
+      }, [])
+
   return (
     <footer className='footer'>
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
